@@ -33,7 +33,7 @@ namespace MoodAnalyserProblem
             catch(NullReferenceException ex)
             {
                 Console.WriteLine(ex.Message);
-                return ex.Message;
+                throw new CustomMoodAnalyserException("Message is having null", CustomMoodAnalyserException.ExceptionType.NULL_MOOD);
             }
         }
     }

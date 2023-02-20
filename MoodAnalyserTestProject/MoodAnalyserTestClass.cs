@@ -17,12 +17,22 @@ namespace MoodAnalyserTestProject
         }
 
         [TestMethod]
-        [DataRow(null, "happy")]
-        public void Given_null_Message_Should_Return_User_Exception(string message, string expected)
+        //[DataRow(null, "happy")]
+        public void Given_null_Message_Should_Return_User_Exception()
         {
-            MoodAnalyser mood = new MoodAnalyser(message);
-            string actual = mood.AnalyseMood();
-            Assert.AreEqual(expected, actual);
+            string message = null;
+            string expected = "Message is having null";
+            try
+            {
+                MoodAnalyser mood = new MoodAnalyser(message);
+                string actual = mood.AnalyseMood();
+                Assert.AreEqual(expected, actual);
+            }
+            catch(CustomMoodAnalyserException ex)
+            {
+                Assert.AreEqual(expected, ex.Message);
+            }
+
         }
     }
 }
