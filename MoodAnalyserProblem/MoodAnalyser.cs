@@ -16,7 +16,6 @@ namespace MoodAnalyserProblem
         }
         public MoodAnalyser()
         {
-            this.message = message;
         }
         public string AnalyseMood()
         {
