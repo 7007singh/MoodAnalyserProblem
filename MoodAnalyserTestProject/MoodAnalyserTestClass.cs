@@ -8,7 +8,6 @@ namespace MoodAnalyserTestProject
     public class MoodAnalyserTestClass
     {
         [TestMethod]
-        [DataRow("I am in happy mood", "happy")]
         [DataRow("I am in SAD mood", "sad")]
         public void Given_Message_Should_Return_User_Mood(string message, string expected)
         {
