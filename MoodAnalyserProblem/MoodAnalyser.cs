@@ -19,13 +19,13 @@ namespace MoodAnalyserProblem
         }
         public string AnalyseMood()
         {
-            if (message.ToLower().Contains("sad"))
+            if (message.ToLower().Contains("happy"))
             {
-                return "sad";
+                return "happy";
             }
             else
             {
-                return "happy";
+                return "sad";
             }
         }
     }

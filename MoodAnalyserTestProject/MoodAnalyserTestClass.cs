@@ -8,10 +8,10 @@ namespace MoodAnalyserTestProject
     public class MoodAnalyserTestClass
     {
         [TestMethod]
-        [DataRow("I am in sad mood", "sad")]
+        [DataRow("I am in happy mood", "happy")]
         public void Given_Message_Should_Return_User_Mood(string message, string expected)
         {
-            MoodAnalyser mood = new MoodAnalyser("I am in sad mood");//Arrange
+            MoodAnalyser mood = new MoodAnalyser("I am in happy mood");//Arrange
             string actual = mood.AnalyseMood();//Act
             Assert.AreEqual(expected, actual);//Assert
         }
