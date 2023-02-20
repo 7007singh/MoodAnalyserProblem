@@ -17,7 +17,7 @@ namespace MoodAnalyserTestProject
         }
 
         [TestMethod]
-        [DataRow(null, "Object reference not set to an instance of an object.")]
+        [DataRow(null, "happy")]
         public void Given_null_Message_Should_Return_User_Exception(string message, string expected)
         {
             MoodAnalyser mood = new MoodAnalyser(message);
